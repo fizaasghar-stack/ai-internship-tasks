@@ -1,0 +1,7 @@
+opencv-python>=4.8
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
+
+# Pipeline B (YOLO) runs on Google Colab: notebooks/task4_yolo_colab.ipynb
+# installs ultralytics there; torch is preinstalled on Colab.

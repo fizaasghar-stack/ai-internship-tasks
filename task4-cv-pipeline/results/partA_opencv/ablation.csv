@@ -1,0 +1,5 @@
+,macro_f1,loc_precision,loc_recall,mean_latency_ms,fps,id_switches
+Full pipeline,0.9904,1.0,1.0,3.3405,299.3604,0.0
+No Gaussian blur,0.99,1.0,1.0,8.965,111.5453,0.0
+Global Otsu threshold,0.7634,1.0,0.6429,1.205,829.865,1.0
+No pixel bounds,0.6392,0.2732,1.0,4.6027,217.2626,0.0

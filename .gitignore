@@ -1,0 +1,22 @@
+# Datasets (download from Kaggle, don't commit)
+Tweets.csv
+*.joblib
+
+# Videos and generated output folders (large files)
+*.mp4
+task4-cv-pipeline/cv_results/
+
+# Files generated when the Task 2 scripts are run from their own folder
+task2-sentiment-classifier/*.png
+task2-sentiment-classifier/*.csv
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Editor / OS
+.vscode/
+.DS_Store
+Thumbs.db

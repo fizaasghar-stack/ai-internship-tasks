@@ -1,0 +1,157 @@
+{
+  "source": "synthetic",
+  "frames": 300,
+  "resolution": "640x480",
+  "parameters": {
+    "blur_ksize": 5,
+    "block_size": 41,
+    "c_const": 10,
+    "morph_ksize": 3,
+    "min_area": 250,
+    "max_area": 20000,
+    "approx_eps": 0.045,
+    "circ_thr": 0.84,
+    "track_dist": 50.0,
+    "track_missing": 5
+  },
+  "latency_ms": {
+    "mean": 4.039965342575063,
+    "median": 3.7725501460954547,
+    "p95": 5.706160119734705,
+    "max": 8.987299865111709,
+    "min": 3.042799886316061,
+    "std": 0.8554439783208702
+  },
+  "processing_fps": 247.52687590201026,
+  "end_to_end_fps_incl_draw_and_write": 90.27977250095105,
+  "stage_mean_ms": {
+    "gray": 0.1602259953506291,
+    "blur": 0.14347366833438477,
+    "threshold": 3.2024936735009155,
+    "contours": 0.46422699621568125,
+    "track": 0.0583553376297156
+  },
+  "detections_per_frame_mean": 7.0,
+  "mean_count_vector": {
+    "circle": 2.9266666666666667,
+    "triangle": 1.9966666666666666,
+    "rectangle": 2.0633333333333335
+  },
+  "unique_track_ids": 7,
+  "evaluation": {
+    "per_class": {
+      "circle": {
+        "precision": 1.0,
+        "recall": 0.9755555555555555,
+        "f1": 0.9876265466816647,
+        "tp": 878,
+        "fp": 0,
+        "fn": 22
+      },
+      "triangle": {
+        "precision": 1.0,
+        "recall": 0.9983333333333333,
+        "f1": 0.9991659716430359,
+        "tp": 599,
+        "fp": 0,
+        "fn": 1
+      },
+      "rectangle": {
+        "precision": 0.9693053311793215,
+        "recall": 1.0,
+        "f1": 0.9844134536505331,
+        "tp": 600,
+        "fp": 19,
+        "fn": 0
+      },
+      "macro_f1": 0.9904019906584113,
+      "localisation_precision": 1.0,
+      "localisation_recall": 1.0
+    },
+    "count_mae_per_class": {
+      "circle": 0.07333333333333333,
+      "triangle": 0.0033333333333333335,
+      "rectangle": 0.06333333333333334
+    },
+    "exact_count_vector_accuracy": 0.9233333333333333,
+    "id_switches": 0,
+    "ground_truth_objects": 7,
+    "confusion_matrix": [
+      [
+        878,
+        0,
+        18,
+        4,
+        0
+      ],
+      [
+        0,
+        599,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        600,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "confusion_rows": [
+      "circle",
+      "triangle",
+      "rectangle",
+      "false alarm"
+    ],
+    "confusion_cols": [
+      "circle",
+      "triangle",
+      "rectangle",
+      "other",
+      "missed"
+    ]
+  },
+  "ablation": {
+    "Full pipeline": {
+      "macro_f1": 0.9904019906584113,
+      "loc_precision": 1.0,
+      "loc_recall": 1.0,
+      "mean_latency_ms": 3.3404553309082985,
+      "fps": 299.3603868153182,
+      "id_switches": 0
+    },
+    "No Gaussian blur": {
+      "macro_f1": 0.9900219705933518,
+      "loc_precision": 1.0,
+      "loc_recall": 1.0,
+      "mean_latency_ms": 8.964968991155425,
+      "fps": 111.5452826425357,
+      "id_switches": 0
+    },
+    "Global Otsu threshold": {
+      "macro_f1": 0.7633583064840984,
+      "loc_precision": 1.0,
+      "loc_recall": 0.6428571428571429,
+      "mean_latency_ms": 1.2050153338350356,
+      "fps": 829.864958495954,
+      "id_switches": 1
+    },
+    "No pixel bounds": {
+      "macro_f1": 0.6392173141346534,
+      "loc_precision": 0.27315296566077,
+      "loc_recall": 1.0,
+      "mean_latency_ms": 4.602725672690819,
+      "fps": 217.26256811985618,
+      "id_switches": 0
+    }
+  }
+}

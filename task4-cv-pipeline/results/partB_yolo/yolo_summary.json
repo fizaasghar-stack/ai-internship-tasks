@@ -1,0 +1,37 @@
+{
+  "model": "yolov8n.pt",
+  "conf_threshold": 0.35,
+  "imgsz": 640,
+  "tracking": true,
+  "frames": 650,
+  "resolution": "1280x720",
+  "gpu": "Tesla T4",
+  "latency_ms": {
+    "mean": 26.200516878464338,
+    "median": 23.754005999990113,
+    "p95": 34.979762950030135,
+    "max": 938.3376399999861,
+    "std": 36.145971561760604
+  },
+  "fps_mean": 38.167185961966865,
+  "stage_mean_ms": {
+    "preprocess": 1.5505722507710884,
+    "inference": 9.476428220000694,
+    "postprocess": 1.0892486692299685
+  },
+  "objects_per_frame_mean": 0.4169230769230769,
+  "objects_per_frame_max": 3,
+  "mean_confidence": 0.5258334173487561,
+  "count_flicker_mean_abs_change": 0.10939907550077041,
+  "class_detections_total": {
+    "person": 100,
+    "airplane": 61,
+    "dining table": 49,
+    "laptop": 46,
+    "bed": 4,
+    "cell phone": 4,
+    "chair": 3,
+    "book": 3,
+    "refrigerator": 1
+  }
+}
